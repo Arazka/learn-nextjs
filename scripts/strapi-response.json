@@ -1,0 +1,26 @@
+{
+  "data": [
+    {
+      "id": 5,
+      "attributes": {
+        "title": "Tips Produktivitas untuk Programmer",
+        "publishedAt": "2024-09-17T23:31:35.000Z",
+        "body": "Menjadi programmer yang produktif memerlukan manajemen waktu yang baik dan penggunaan alat-alat yang efisien. Dalam artikel ini, kita akan mengeksplorasi berbagai tips dan trik untuk meningkatkan produktivitas Anda sebagai programmer...",
+        "image": {
+          "data": {
+            "id": 6,
+            "attributes": {
+              "url": "/uploads/Wallpaper_Laptop_Religius_Spiritual_Fotosentris_Gunung_Biru_ab3f57dd34.png"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "meta": {
+    "pagination": {
+      "page": 1,
+      "pageSize": 1
+    }
+  }
+}

@@ -9,6 +9,7 @@ export const metadata = {
 export default async function BlogPage() {
   const posts = await getAllPosts();
   // console.log(posts);
+  // console.log("done!");
 
   return (
     <>

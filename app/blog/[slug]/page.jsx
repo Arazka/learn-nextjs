@@ -1,14 +1,15 @@
 import Heading from "@/components/Heading";
 import ShareLinkButton from "@/components/ShareLinkButton";
 import { getPosts, getSlugs } from "@/lib/post";
+import Image from "next/image";
 
-export async function generateStaticParams() {
-  const slugs = await getSlugs();
-  return slugs.map((slug) => ({ slug }));
-}
+// export async function generateStaticParams() {
+//   const slugs = await getSlugs();
+//   return slugs.map((slug) => ({ slug }));
+// }
 
-export async function generateMetadata({ params }) {
-  const slug = params.slug;
+export async function generateMetadata({ params: { slug } }) {
+  // const slug = params.slug;
   const post = await getPosts(slug);
 
   return {
@@ -17,16 +18,18 @@ export async function generateMetadata({ params }) {
   };
 }
 
+// export const dynamicParams = false;
+export const dynamic = "force-dynamic";
+
 export default async function PostPage({ params: { slug } }) {
-  // slug berisikan url yang ditangkap dari file page.jsx yg ada didalam folder blog
   const post = await getPosts(slug);
-  // console.log(slug);
+  // console.log("slug: " + slug);
 
   return (
     <>
       <Heading>{post.title}</Heading>
-      <img src={post.image} alt="" width={640} height={360} className="mb-2 rounded-sm" />
-      <div className="flex flex-row items-center justify-between">
+      <Image src={post.image} alt={post.title} width={640} height={360} className="mb-2 rounded-sm w-full h-auto" />
+      <div className="flex flex-row items-center justify-between mb-2">
         <p className="italic text-sm text-slate-500">
           {post.date} - {post.author}
         </p>
