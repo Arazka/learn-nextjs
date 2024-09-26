@@ -1,16 +1,51 @@
 {
   "data": [
     {
-      "id": 5,
+      "id": 11,
       "attributes": {
-        "title": "Tips Produktivitas untuk Programmer",
-        "publishedAt": "2024-09-17T23:31:35.000Z",
-        "body": "Menjadi programmer yang produktif memerlukan manajemen waktu yang baik dan penggunaan alat-alat yang efisien. Dalam artikel ini, kita akan mengeksplorasi berbagai tips dan trik untuk meningkatkan produktivitas Anda sebagai programmer...",
+        "slug": "blog-update-terbaru",
+        "title": "blog update terkini",
+        "description": "The React Framework for the Web. Used by some of the world's largest companies, Next.js enables you to create high-quality web applications with the power of React components.",
+        "publishedAt": "2024-09-25T05:30:26.819Z",
         "image": {
           "data": {
-            "id": 6,
+            "id": 3,
             "attributes": {
-              "url": "/uploads/Wallpaper_Laptop_Religius_Spiritual_Fotosentris_Gunung_Biru_ab3f57dd34.png"
+              "url": "/uploads/pexels_mayday_1365795_147e0e739b.jpg"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": 7,
+      "attributes": {
+        "slug": "belajar-basic-next-js",
+        "title": "Belajar Basic Next.JS",
+        "description": "The React Framework for the Web. Used by some of the world's largest companies, Next.js enables you to create high-quality web applications with the power of React components.",
+        "publishedAt": "2024-09-19T00:48:31.846Z",
+        "image": {
+          "data": {
+            "id": 8,
+            "attributes": {
+              "url": "/uploads/james_wiseman_img_Cpf_I_Mo_Rw_unsplash_40223b2e4f.jpg"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": 6,
+      "attributes": {
+        "slug": "keamanan-api",
+        "title": "Keamanan API",
+        "description": "Praktik terbaik untuk mengamankan API Anda",
+        "publishedAt": "2024-09-17T23:32:10.461Z",
+        "image": {
+          "data": {
+            "id": 7,
+            "attributes": {
+              "url": "/uploads/Dark_Modern_Photo_Mountain_And_Sky_Desktop_Wallpaper_f3479b8c7e.png"
             }
           }
         }
@@ -20,7 +55,9 @@
   "meta": {
     "pagination": {
       "page": 1,
-      "pageSize": 1
+      "pageSize": 3,
+      "pageCount": 3,
+      "total": 8
     }
   }
 }

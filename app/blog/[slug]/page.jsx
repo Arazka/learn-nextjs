@@ -2,15 +2,23 @@ import Heading from "@/components/Heading";
 import ShareLinkButton from "@/components/ShareLinkButton";
 import { getPosts, getSlugs } from "@/lib/post";
 import Image from "next/image";
+import Link from "next/link";
+import { notFound } from "next/navigation";
 
-// export async function generateStaticParams() {
-//   const slugs = await getSlugs();
-//   return slugs.map((slug) => ({ slug }));
-// }
+// export const dynamicParams = false;
+// export const revalidate = 30;
+
+export async function generateStaticParams() {
+  const slugs = await getSlugs();
+  return slugs.map((slug) => ({ slug }));
+}
 
 export async function generateMetadata({ params: { slug } }) {
   // const slug = params.slug;
   const post = await getPosts(slug);
+  if (!post) {
+    notFound();
+  }
 
   return {
     title: post.title,
@@ -18,12 +26,13 @@ export async function generateMetadata({ params: { slug } }) {
   };
 }
 
-// export const dynamicParams = false;
-export const dynamic = "force-dynamic";
-
 export default async function PostPage({ params: { slug } }) {
-  const post = await getPosts(slug);
   // console.log("slug: " + slug);
+  // slug berisikan url yang ditangkap dari file page.jsx yg ada didalam folder blog
+  const post = await getPosts(slug);
+  if (!post) {
+    notFound();
+  }
 
   return (
     <>

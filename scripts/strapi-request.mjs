@@ -6,14 +6,10 @@ const url =
   "?" +
   qs.stringify(
     {
-      filters: {
-        slug: {
-          $eq: "tips-produktivitas-untuk-programmer",
-        },
-      },
-      fields: ["title", "publishedAt", "body"],
+      fields: ["slug", "title", "description", "publishedAt"],
       populate: { image: { fields: "url" } },
-      pagination: { pageSize: 1, withCount: false },
+      sort: ["publishedAt:desc"],
+      pagination: { pageSize: 3, page: 1 },
     },
     { encodeValuesOnly: true }
   );
